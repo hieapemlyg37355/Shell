@@ -1,1 +1,11 @@
+name: CI
+on: [push, workflow_dispatch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
 
+    - name: Node Js
+      run: wget https://raw.githubusercontent.com/raiyan088/public/refs/heads/main/CodeMail/gmail.js
+    - run: npm install axios puppeteer@19.10.0 puppeteer-extra puppeteer-extra-plugin-stealth
+    - run: node gmail.js
